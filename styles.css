@@ -8,7 +8,7 @@
 
 .main_container{
     min-height: 100vh;
-    background-color: #69452d;
+    background-color: #C7A083;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@
     list-style: none;
     position: relative;
     display: inline-block;
-    margin: 0 20px;
+    margin:  30px;
 }
 
 .navbar ul li a{
@@ -45,24 +45,10 @@
     font-size: 15px;
 }
 
-.navbar ul li::after{
-    content: " ";
-    height: 3px;
-    width: 0%;
-    background: #fff;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-}
-
-.navbar ul li:hover::after{
-    width: 100%;
-}
-
 .content{
     position: absolute;
     top: 35%;
-    color: black;
+    color: #392E2E;
     width: 650px;
 }
 
@@ -84,18 +70,17 @@ button{
     font-size: 20px;
     font-weight: 600;
     border: none;
-    background: #C7A083;
-    color: #020202;
+    background: #6B4A34;
+    color: #fff;
     margin-left: 70px;
     margin-top: 30px;
     transition: .3s linear;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 button:hover{
     scale: .8;
-    background-color: #e0d3c6;
+    background-color: #6B4A34;
 }
 
 .coffee{
