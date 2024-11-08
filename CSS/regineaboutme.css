@@ -1,0 +1,1050 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Jersey+25&family=Protest+Strike&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    position: relative;
+    color: #fff;
+}
+
+section{
+    padding: 100px 10%;
+}
+
+
+    /*---------  HEADER ni sya? CUTE KAAYO NI ay   -----------*/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.3rem 10%;
+    z-index: 100;
+}
+
+.header img{
+    max-width: 100%;
+    height: auto; 
+    max-height: 60px;
+    margin-left: -30px;
+    filter: brightness(2);
+    cursor: pointer;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+}
+
+.header:hover::after{ 
+    left: 100%;
+    
+}
+
+    /*---------  NAVIBARRRR SAMOT NANI  -----------*/
+
+.navbar {
+    display: flex;
+    margin-left: auto; 
+}
+
+.navbar a {
+    font-size: 1.10rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 530;
+    margin-left: 1.3rem;
+    padding: 5px 10px;
+    display: flex;
+   
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgb(255, 255, 255);
+    background-color: #04c0fa;  
+    border-radius: 10px;
+}
+
+#check {
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #04E6FF;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+    /*-------  RESPONSIVENESS SECTION (header ug navbar) RAWR  --------*/
+
+@media (max-width: 992px){
+    .header{
+        padding: 1.5rem 5%;
+    }
+
+    .navbar a {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px){
+    .header img{
+        max-width: 120px;
+    }
+
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        display: block;
+    }
+
+    #check:checked~.navbar {
+        height: 25rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.8rem;
+        margin: .8rem 20px;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: transform .3s ease, opacity 0.3s ease;
+        background-color: #233c61;
+        border-radius: 50px;
+
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+    /*--------- GIF BACKGROUND CHOOYYY ----------*/
+
+video#gif{
+    font-family: 'jersey 25', sans-serif;
+    background:  rgba(0, 0, 0, 0.5) url(../IMAGES/BG.gif) no-repeat center center;
+    background-size: 100% 120%;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+   
+    /*---------- ABOUT ME SECTION CHARRGWAPAKOHAHAHA ---------*/
+
+.about_me {
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.about-content h3{
+    font-family: 'Jersey 25';
+    font-size: 30px;
+    font-weight: 700px;
+    margin-bottom: 0; 
+}
+
+.about-content h3:nth-of-type(2) {
+    margin-bottom: 5px;
+}
+
+span{
+    color: rgb(0, 238, 255);
+    font-weight: 800px;
+    font-family: 'Roboto Slab';
+    font-size: 30px;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-content h1{
+    font-size: 3.7rem;
+    font-family: 'Jersey 25';
+    font-weight: 400;
+    margin-top: 0; 
+    margin-bottom: 0; 
+}
+
+.img-fluid{
+    max-width: 45%; 
+    filter: brightness(1);
+    filter: drop-shadow(0px 4px 10px #04E6FF);
+    height: auto;
+    animation: floatImage 4s ease-in-out infinite;
+    border-radius: 130px;
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.about-content p{
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 18px;
+  
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: .5px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    margin: 0 40px 30px 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover{
+    color: #000000;
+    background-color: #0ef;
+}
+
+
+     /*-------- BUTTON AREA CHUCHU ---------*/
+
+ .btn{
+    display: inline-block;
+    background-color: #04e6ffcb;
+    border-radius: 10px;
+    box-shadow: 0 0 1rem rgb(17, 195, 207);
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    transition: .5s linear;
+    cursor: pointer;
+    text-decoration: none;
+    width: auto; 
+}
+
+.btn:hover{
+    scale: .8;
+    background-color: #04c0fa;
+}
+
+
+
+    /*--------- ABOUT ME RESPONSIVE CHUCHU ----------*/
+
+@media (max-width: 991px) {
+    html {
+        font-size: 50%;
+    }
+    
+    .section{
+        padding: 10rem 3%;
+    }
+
+    .about-content h3{
+        margin: 0 auto; 
+        padding: 0 10px;
+        font-size: 20px;
+    }
+
+    .about-content h1{
+        margin: 0 auto; 
+        padding: 0 10px;
+        font-size: 40px;
+    }
+
+    .about-content p{
+        font-size: 14px;
+        margin: 0 auto; 
+        padding: 0 10px;
+    }
+
+    span{
+        font-size: 21px;
+    }
+
+    .btn{
+        font-size: 16px;
+    }
+
+    .navbar a {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about_me{
+        flex-direction: column;
+        text-align: center;
+        margin-top: -80px;
+    }
+
+    .about-content h3{
+        font-size: 22px;
+    }
+
+    .social-media a {
+        align-items: center;
+        margin: 5px 20px 20px 0;
+    }
+
+    span{
+        font-size: 21px;
+    }
+
+    .about-content h1{
+        font-size: 34px;
+    }
+
+    .about-content p{
+        font-size: 13px;
+    }
+
+    .about-content {
+        padding-right: 0; 
+        font-size: 30px;
+        margin-top: 40px;
+    }
+
+    .btn{
+        font-size: 14px;
+    }
+
+    .img-fluid{
+        max-width: 55%; 
+    }
+}
+
+
+
+    /*---------- HIDDEN PROJECTS SECTION CHAROTT LANG ---------*/
+
+    .main-text{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        align-items: center; 
+    }
+    
+    .main-text h2{
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: #04E6FF;
+        flex: 1;
+        margin-top: -.7rem;
+    }
+
+    .more{
+        scroll-behavior: smooth;
+        flex-direction: column;
+        align-items: flex-start; 
+        position: relative;
+        justify-content: center;
+    }
+    
+    .back-btn{
+        padding: 6px;
+        background-color: #0367aacb;
+        border-radius: 10px;
+        font-size: 12px;
+        color: #fff;
+        font-weight: 500;
+        transition: .5s linear;
+        cursor: pointer;
+        text-align: center;
+        width: 100%; 
+        max-width: 100px;
+        
+    }
+    
+    .back-btn:hover{
+        transform: scale(0.8);
+        background-color: #04c0fa;
+    }
+   
+    .more-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        gap: 18px;
+        width: 100%; 
+        margin: 0 auto;
+    }
+    
+    .more-container .more-box{
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #0ef;
+        overflow: hidden;
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .more-box img{
+        width: 100%;
+        transition: .5s ease;
+        opacity: 0.6;
+        height: auto; 
+    }
+    
+    .more-box:hover img{
+        transform: scale(1.1);
+    }
+    
+    .more-box .more-layer{
+        position: absolute;
+        bottom: 0;
+        left: 35px;
+        width: 80%;
+        height: 80%;
+        background: linear-gradient(rgba(0, 0, 0, 0.1) #04E6FF);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 10px;
+        transform: translateY(100%);
+        transition: .5s ease;
+        overflow: hidden;
+    }
+    
+    .more-box:hover .more-layer{
+        transform: translateY(0);
+    }
+    
+    .more-layer h4{
+        font-size: 18px;
+        overflow: hidden; 
+    }
+    
+    .more-layer p{
+        font-size: 14px;
+        overflow: hidden;
+    }
+    
+    .more-layer a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background: #00bfff;
+        border-radius: 50%;
+    }
+    
+    .more-layer a i{
+        font-size:30px;
+        color: #0ef;
+    }
+    
+    .heading{
+        text-align: center;
+        font-size: 36px;
+    }
+
+    #more {
+        display: none; 
+    }
+
+
+        /*-------- PROJECTSS RESPONSIVE EYY CHARCHAR -------*/
+
+
+@media (max-width: 1100px) {
+        .more-container{
+            grid-template-columns:  repeat(2,1fr);
+            align-items: center;
+            margin-left: 5%;
+        }
+        .more-container .more-box {
+            max-width: 80%; 
+            width: auto; 
+        }
+    
+        .more-layer h4 {
+            font-size: 16px;
+        }
+    
+        .more-layer p {
+            font-size: 12px; 
+        }
+    
+        .more{
+            text-align: center;
+            flex-direction: column;
+            padding: 10rem 2%;
+        }
+    
+        .main-text {
+            flex-direction: column;  
+            align-items: center;
+        }
+    
+        .main-text h2 {
+            margin-bottom: 20px;
+           align-items: center;
+        }
+    }
+  
+    @media (max-width: 768px) {
+        .more-container{
+            grid-template-columns: 1fr;
+            align-items: center;
+            width: 80%; 
+            margin-left: 15%;
+        }
+        .more-container .more-box {
+            max-width: 90%;
+            width: auto; 
+        }
+    
+        .more-layer h4 {
+            font-size: 14px;
+        }
+    
+        .more-layer p {
+            font-size: 11px; 
+        }
+    
+        .more{
+            text-align: center;
+            flex-direction: column;
+            padding: 10rem 1%;
+        }
+    
+        .main-text {
+            flex-direction: column;  
+            align-items: center;
+            margin-top: 1rem; 
+        }
+    
+        .main-text h2 {
+            margin-top: 1rem; 
+            margin-bottom: 20px;
+           align-items: center;
+        }
+    }
+  
+
+
+        /*---------- HIDDEN WORK EXPERIENCES GRABI KA KUAN.. -----------*/
+
+.main-work{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    align-items: center; 
+}
+
+.main-work h2{
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #04E6FF;
+    flex: 1;
+    margin-top: 1rem;
+}
+
+.work {
+    scroll-behavior: smooth;
+}
+
+#work {
+    display: none; 
+}
+
+
+.work-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem; 
+}
+
+.work-container .work-box {
+    flex: 1 1 18rem; 
+    height: 400px; 
+    background: rgba(62, 96, 102, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 10px #0ef;
+    padding: 2rem 1rem;
+    transition: transform .4s;
+    text-align: center;
+}
+
+.work-container .work-box:hover {
+    transform: scale(1.02);
+}
+
+.work-box h4 {
+    font-size: 17px;
+    font-style: italic;
+    text-align: center;
+}
+
+.work-box h3 {
+    color: #ffffff;
+    border: 2px solid #0ef;
+    background-color: #192e4e;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+.work-box p {
+    font-size: 15px;
+    margin: .5rem 0 1.5rem 0;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+
+        /*--------- RESPONSIVE WORK EXPIREEEEE NANI ---------*/
+
+@media (max-width: 1200px) {
+    .work-container {
+        flex-direction: row; 
+        align-items: center; 
+    }
+
+    .main-work {
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    .work-box {
+        max-width: 17rem; 
+    }
+}
+
+@media (max-width: 991px) {
+
+    .work-container {
+        flex-direction: row; 
+        align-items: center; 
+    }
+
+    .main-work {
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    .work-box {
+        max-width: 35rem; 
+    }
+}
+
+@media (max-width: 800px) {
+    .work-box h4 {
+        font-size: 16px;  
+    }
+    
+    .work-box p {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .work-container {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 25px; 
+    }
+
+    .main-work {
+        flex-direction: column; 
+        align-items: center;
+        margin-top: .5rem; 
+    }
+
+    .main-work h2 {
+        margin-top: .5rem; 
+        margin-bottom: 20px; 
+        align-items: center;
+
+    }
+
+    .work-box {
+        width: 100%; 
+        max-width: 50rem; 
+        height: 400px;
+    }
+
+    .work-box h2 {
+        font-size: 15px;
+        text-align: justify;
+    }
+}
+
+
+
+        /*--------  CERTIFICATES SECTION HOYYY CHAR  ---------*/
+
+.certificates-section {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+} 
+
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+    margin-top: 6rem;
+}
+
+.certificate-card {
+    background-color: rgba(48, 77, 82, 0.7);
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    max-width: 350px;
+    text-align: center;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.certificate-card:hover {
+    background-color: rgba(48, 112, 114, 0.9);
+}
+
+.certificate-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.certificate-text h3 {
+    font-size: 22px;
+    font-weight: 500px;
+    margin-bottom: 10px;
+}
+
+.certificate-text p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.certificate-text h4{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 500px;
+}
+
+
+
+        /*---------  CERTIFICATE RESPONSIVE CHAROTT ----------*/
+
+@media (max-width: 768px) {
+    .certificate-card {
+        padding: 20px; 
+        max-width: 90%; 
+    }
+
+    .certificate-card img {
+        max-height: 150px; 
+    }
+
+    .certificate-text h3 {
+        font-size: 18px; 
+    }
+
+    .certificate-text h4 {
+        font-size: 16px; 
+    }
+
+    .certificate-text p {
+        font-size: 14px; 
+    }
+}
+
+
+
+        /*---------- SKILLS SECTION MAS GRABI JUD NI ----------*/
+    
+.skills-section {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Roboto Slab';
+    
+  }
+  
+  .skill-label {
+    color: #ffffff; 
+    font-size: 1.5rem; 
+  }
+  
+  .progress {
+    background-color: rgba(0, 0, 0, 0.2); 
+    height: 25px; 
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 4px 5px 8px rgba(2, 235, 252, 0.3);
+    max-width: 100%; 
+  }
+  
+  .progress-bar {
+    background-color: #00cfff; 
+    color: #04c0fa;
+    height: 100%; 
+    transition: width 0.5s ease; 
+  }
+  
+  .row .text-start {
+    font-size: 1.4rem; 
+    color: #ffffff; 
+    font-weight: bold; 
+  }
+  
+  .mb-3 {
+    margin-bottom: 50px; 
+  }
+  
+  .container {
+    max-width: 1200px; 
+    margin: auto; 
+  }
+  
+
+
+        /*---------- SKILLS RESPONSIVE ATIKK ----------*/
+    
+@media (max-width: 991px) {
+    .skills-section {
+        margin-top: 200px; 
+        margin-bottom: 100px;
+    }
+    
+    .progress {
+        height: 25px;
+    }
+
+    .skill-label {
+        font-size: 2rem; 
+    }    
+  
+    .mb-3 {
+      margin-bottom: 100%; 
+    }
+
+    .row .text-start {
+        font-size: 2rem; 
+        font-weight: 200; 
+    }
+}
+
+  @media (max-width: 768px) {
+    .row .col-md-6,
+    .row .col-md-5,
+    .row .col-md-1 {
+      text-align: justify;
+    }
+
+    .skills-section {
+        margin-top: 200px; 
+    }
+    
+    .progress {
+        height: 18px;
+    }
+
+    .pe-md-3 {
+      padding-right: 5px; 
+    }
+  
+    .mb-3 {
+      margin-bottom: 100%; 
+    }
+
+    .skill-label {
+        font-size: 1.5rem; 
+    }   
+
+    .row .text-start {
+        font-size: 1.4rem; 
+        font-weight: 400;
+        padding-right: 5px; 
+    } 
+
+  }
+
+
+
+
+
+
+  .home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+   }
+   .navbar-nav .nav-link {
+    font-size: 1.3rem; 
+   }
+   .par {
+    position: relative; 
+   }
+
+  .navbar-nav a:hover,
+  .navbar-nav a.active {
+        color: rgb(255, 255, 255);
+        background-color: #04c0fa;  
+        border-radius: 10px;
+    }
+   .big{
+      background: #181818;
+      filter: drop-shadow( 0px 5px 9px #00DBFE);
+      border-radius: 10px;
+    }
+    .GP img{
+      filter: drop-shadow( 0px 0px 9px #00DBFE);
+    }
+
+    @media (max-width: 1343px) {            
+        .GP img {
+            width: 300px; 
+        }
+    }
+
+    @media (max-width: 1167px) {
+      .GP{
+        margin-top: 100px;
+      }
+    }
+
+    @media (max-width: 768px) {
+        .home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; 
+            height: 100vh; 
+        }
+
+        .GP {
+            margin-top: auto; 
+        }
+
+        .GP img {
+            width: 300px; 
+            margin-left: 35px; 
+        }
+    }
+
